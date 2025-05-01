@@ -1,0 +1,5 @@
+aws
+ls s3 
+ec2 
+lambda
+iam
