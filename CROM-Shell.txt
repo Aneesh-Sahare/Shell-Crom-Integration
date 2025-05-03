@@ -1,0 +1,41 @@
+#Shell, Identity attribute, Path of the Key-Value Pair, Software Provider, @ip-address of Cloud Virtual Machine#
+ssh -i User/AneeshSahare/Downloads/test.pem Ubuntu@3.92.207.193
+
+#AWS Authentication#
+aws configure
+
+#using Editor#
+vi aws-resource-tracker.sh
+
+    #For Debugging#
+    set -x or set -e
+  
+    #Tracking_Resources:
+    -S3
+    -EC2
+    -Lambda
+    -IAM
+
+    #To List All Buckets#
+     aws s3 ls
+
+    #To List All Instances#
+     aws ec2 describe-instances
+
+    #To List All Functions#
+     aws lambda list-functions
+
+    #To List All Users#
+     aws iam list-users
+
+#Granting Permissions#
+chmod 777 aws-resource-tracker.sh
+
+#Executing The File#
+./aws-resource-tracker.sh
+           OR
+##Increases Readability##
+./aws-resource-tracker.sh | more 
+
+#Applying Filter# jq(For json) / yq(for yaml)
+./aws-resource-tracker.sh | jq '.Reservations[].Instances[]'
