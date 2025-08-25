@@ -6,4 +6,4 @@ chmod +x file.sh
 Execution :
 crontab -e
 #everyday at 7am
-0 7 * * * /home/
+0 7 * * * /home/file.sh
