@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #log storage location#
-LOGFILE="home/aws/log"
+LOGFILE="home/aws/aws.log"
 
 
 
